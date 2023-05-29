@@ -43,10 +43,9 @@
  ```
 ## 3) Install kops software on an ubuntu instance by running the commands below:
  	sudo apt install wget -y
- 	sudo rm -rf /usr/local/bin/kops
-	wget -O kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
-	chmod +x ./kops
-	sudo mv ./kops /usr/local/bin/
+ 	sudo wget https://github.com/kubernetes/kops/releases/download/v1.16.1/kops-linux-amd64
+ 	sudo chmod +x kops-linux-amd64
+ 	sudo mv kops-linux-amd64 /usr/local/bin/kops
 
  
 ## 4) Install kubectl kubernetes client if it is not already installed
